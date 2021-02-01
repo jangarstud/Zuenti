@@ -11,7 +11,7 @@ cache:
 
 addons:
   sonarcloud:
-    organization: "sonarcloud_jangarstud" # the key of the org you chose at step #3
+    organization: "jangarstud" # the key of the org you chose at step #3
     token:
       secure: $SONAR_TOKEN # encrypted value of your token
 
