@@ -8,6 +8,7 @@ node_js:
 cache:
   directories:
     - node_modules
+    - "$HOME/.sonar/cache"
 
 addons:
   sonarcloud:
