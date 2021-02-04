@@ -27,12 +27,13 @@ app.use(express.json())
 app.use(cors());
 app.use(bodyParser.json());
 
+
 // // Bring in the Passport Strategy
 
 // Routes (URL)
-
+app.use('/api/images', require('./routes/image'))
 app.use('/api/auth', require('./routes/auth'))
-
+app.use('/api/profile', require('./routes/profile'))
 // Static files
 app.use(express.static(process.cwd() + '/dist'))
 

@@ -41,7 +41,24 @@ const routes = [
     meta: {
       requiresGuest: true
     }
+  },
+  {
+    path: '/feed',
+    name: 'feed',
+    component: () => import('../views/Feed.vue'),
+    meta: {
+      requiresGuest: true
+    }
+  },
+  {
+    path: '/friends',
+    name: 'friends',
+    component: () => import('../views/Friends.vue'),
+    meta: {
+      requiresGuest: true
+    }
   }
+
 ]
 
 const router = new VueRouter({

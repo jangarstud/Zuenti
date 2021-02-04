@@ -1,14 +1,9 @@
 <template>
-  <div id="app">
-    <b-container fluid>
-      <b-row class="text-center">
-          <div v-resize-text="{ratio:1.5, minFontSize: '30px', maxFontSize: '200px', delay: 200}" class="title">ZUENTI</div>
-      </b-row>
-      <b-row class="text-center">
+  <body id="app" class="d-flex justify-content-center align-items-center flex-wrap">
+      <div class="text-center size d-flex align-items-center">
         <LoginZuenti></LoginZuenti>
-      </b-row>
-    </b-container>
-  </div>
+      </div>
+  </body>
 </template>
 
 <script>
@@ -27,19 +22,24 @@ export default {
 </script>
 
 <style>
+.margin-left {
+  margin-right: 200px;
+}
 .size {
-  background: blue;
-  height: 80%;
+  height: 100%;
+  width: 100%;
 }
 .title {
   width: 100%;
 }
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  background: green;
+body#app {
+  margin: 0;
+  padding: 0;
+  background: url(../assets/bg-01.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   height: 100vh;
 }
 </style>

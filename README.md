@@ -1,3 +1,7 @@
+# Travis-CI Build Status badge
+[![Build Status](https://travis-ci.com/SyTW2020/E09.svg?token=jVTytdsEzTU3QcwYozAq&branch=main)](https://travis-ci.com/SyTW2020/E09)
+
+# SonarCloud Status badges
 [![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/dashboard?id=jangarstud_Zuenti)
 
 [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=jangarstud_Zuenti)](https://sonarcloud.io/dashboard?id=jangarstud_Zuenti)
@@ -13,6 +17,9 @@
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=jangarstud_Zuenti&metric=security_rating)](https://sonarcloud.io/dashboard?id=jangarstud_Zuenti)
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=jangarstud_Zuenti&metric=sqale_index)](https://sonarcloud.io/dashboard?id=jangarstud_Zuenti)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=jangarstud_Zuenti&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=jangarstud_Zuenti)
+
+# Enlace a repositorio público para la ejecución de SonarCloud
+[Repositorio público con ejecución de SonarCloud](https://github.com/jangarstud/Zuenti)
 
 # frontend
 

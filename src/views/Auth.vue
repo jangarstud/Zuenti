@@ -1,12 +1,8 @@
 <template>
-  <div id="app">
-    <b-container fluid>
-      <div class="container">
-        <div class="card">
-          <RegisterCard></RegisterCard>
-        </div>
-      </div>
-    </b-container>
+  <div class="bg-page d-flex justify-content-center align-items-center">
+    <div class="card box-size">
+      <RegisterCard></RegisterCard>
+    </div>
   </div>
 </template>
 
@@ -21,26 +17,25 @@ export default {
 </script>
 
 <style scoped>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  background: green;
+body#auth {
+  margin: 0;
+  padding: 0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   height: 100vh;
 }
-.size {
-  height: 80%;
+.box-size {
+  width: 40%;
 }
 
-.container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  margin-top: 80px;
-}
-
-.card {
-  margin: 0px auto;
+.bg-page {
+  background: url(../assets/bg-01.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 94.1vh;
 }
 </style>

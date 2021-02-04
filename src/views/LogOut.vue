@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
+  <body id="app" class="d-flex justify-content-center">
     <CardLogOut></CardLogOut>
-  </div>
+  </body>
 </template>
 
 <script>
@@ -16,19 +16,14 @@ export default {
 </script>
 
 <style>
-.size {
-  background: blue;
-  height: 80%;
-}
-.title {
-  width: 100%;
-}
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  background: green;
+body#app {
+  margin: 0;
+  padding: 0;
+  background: url(../assets/bg-01.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   height: 100vh;
 }
 </style>
