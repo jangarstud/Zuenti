@@ -15,7 +15,7 @@ describe('CardLogOut', () => {
       });
 
     let titulo = wrapper.find('.card-title');
-    expect(titulo.text()).toBe('logged out successfully');
+    expect(titulo.text()).toBe('Logged out successfully!!');
         
   })
 

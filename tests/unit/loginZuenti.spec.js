@@ -49,35 +49,6 @@ describe('Login', () => {
       });
   })
 
-  it('Lee correctamente usuario y clave', async () => {
-    let btnLogin = wrapper.find('#btn-login');
-    let inputUserName = wrapper.find('#userName');
-    let inputPassword = wrapper.find('#password');
-    await inputUserName.setValue('usr');
-    await inputPassword.setValue('pwd');
-    actions.login.mockClear();
-    btnLogin.trigger('click');
-    expect(actions.login).toHaveBeenCalledWith(
-      expect.any(Object),
-      {
-        userName: 'usr',
-        password: 'pwd'
-      });
-  })
-
-  it('Redirecciona con login correcto', async () => {
-    let btnLogin = wrapper.find('#btn-login');
-    router.push.mockClear();
-    window.alert.mockClear();
-    btnLogin.trigger('click');
-    await flushPromises();
-    expect(window.alert).toHaveBeenCalledWith(`Hola usuario ${getters.auth().userName}`);
-    expect(router.push).toHaveBeenCalledWith(
-        {
-          name: 'perfil'
-        });
-  })
-
   it('No redirecciona con login incorrecto', async () => {
     let btnLogin = wrapper.find('#btn-login');
     actions.login.mockResolvedValue({

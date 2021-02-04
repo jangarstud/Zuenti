@@ -1,47 +1,68 @@
-import RegisterCard from '../../src/components/register/RegisterCard.vue'
-import {shallowMount} from "@vue/test-utils"
-describe("RegisterCard", () => {
-    
+import { shallowMount, mount, createLocalVue } from '@vue/test-utils'
+import LoginZuenti from '../../src/components/login/LoginZuenti.vue'
+import Vuex from 'vuex'
+import flushPromises from 'flush-promises'
 
-    const wrapper = shallowMount(RegisterCard)
+const localVue = createLocalVue();
+localVue.use(Vuex);
 
-    it("usuario registrado", async () => {
+let div = document.createElement('div');
+div.id = 'raiz';
+document.body.appendChild(div);
 
-        const textInput = wrapper.find('#formGroupExampleInput')
-        await textInput.setValue('test')
-        //await wrapper.trigger('keydown.enter')
+window.alert = jest.fn();
 
-        const textInput2 = wrapper.find('#formGroupExampleInput2')
-        await textInput2.setValue('test')
-        //await wrapper.trigger('keydown.enter')
+describe('Login', () => {
+  let wrapper;
+  let actions;
+  let router;
+  let getters;
 
-        const email = wrapper.find('#exampleInputEmail1')
-        await email.setValue('test@gmail.com')
-        //await wrapper.trigger('keydown.enter')
+  beforeAll(() => {
+      router = {
+          push: jest.fn()
+      }
+      actions = {
+          login: jest.fn().mockResolvedValue({
+            data: {
+              success: true
+            }
+          })
+      }
+      getters = {
+        auth: () => ({
+          userName: 'test',
+          password: 'pwd'
+        })
+      }
+      let store = new Vuex.Store({
+          actions,
+          getters
+      });
+      wrapper = shallowMount(LoginZuenti, {
+        store,
+        localVue,
+        mocks: {
+          $router: router
+        },
+        attachTo: '#raiz'
+      });
+  })
 
-        const password = wrapper.find('#password')
-        await password.setValue('1234')
-        //await wrapper.trigger('keydown.enter')
-
-        const RepeatPassword = wrapper.find('#RepeatPassword')
-        await RepeatPassword.setValue('1234')
-        //await wrapper.trigger('keydown.enter')
-
-        const boton = wrapper.find("#boton-send")
-        await boton.trigger('click')
-
-        expect(wrapper.vm.newUser.userName).toContain('test')
-        expect(wrapper.vm.newUser.email).toContain('test@gmail.com')
-
-        wrapper.vm.$emit('addUser')
-        expect(wrapper.emitted().addUser).toBeTruthy()
-
-        //const user = wrapper.emitted()
-        
-
-       //expect(wrapper.emitted().addUser).toContain('test')
-
-
-    })
+  it('Lee correctamente usuario y clave', async () => {
+    let btnLogin = wrapper.find('#btn-login');
+    let inputUserName = wrapper.find('#userName');
+    let inputPassword = wrapper.find('#password');
+    await inputUserName.setValue('usr');
+    await inputPassword.setValue('pwd');
+    actions.login.mockClear();
+    btnLogin.trigger('click');
+    expect(actions.login).toHaveBeenCalledWith(
+      expect.any(Object),
+      {
+        userName: 'usr',
+        password: 'pwd'
+      });
+  })
 
 })
