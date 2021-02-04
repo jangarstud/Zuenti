@@ -1,0 +1,7 @@
+organization=jangarstud
+projectKey=jangarstud_Zuenti
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.16954
+dashboardUrl=https://sonarcloud.io/dashboard?id=jangarstud_Zuenti
+ceTaskId=AXdq0zw_76C-3aJpS7XL
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXdq0zw_76C-3aJpS7XL

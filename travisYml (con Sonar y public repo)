@@ -1,0 +1,32 @@
+os: linux
+dist: xenial
+
+language: nodejs
+node_js:
+  - stable
+
+cache:
+  directories:
+    - node_modules
+    - "$HOME/.sonar/cache"
+
+addons:
+  sonarcloud:
+    organization: "jangarstud"
+    token: ${SONAR_TOKEN}
+
+script:
+  - npm install -g @vue/cli
+  - npm install
+  - npm run test:unit
+  - sonar-scanner
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: main
+
+notifications:
+  slack: ull-sytw2020-e09:CGvvKj8wLLQ1WpURL8IGYBdy

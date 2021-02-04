@@ -1,0 +1,106 @@
+server on port 3000
+DB is connected
+[0mOPTIONS /api/auth/register [32m204[0m 4.403 ms - 0[0m
+hola
+contraseña igual
+[0mPOST /api/auth/register [33m400[0m 13.045 ms - 32[0m
+hola
+contraseña igual
+[0mPOST /api/auth/register [33m400[0m 2.674 ms - 32[0m
+[0mOPTIONS /api/auth/register [32m204[0m 0.243 ms - 0[0m
+hola
+contraseña igual
+[0mPOST /api/auth/register [33m400[0m 1.223 ms - 32[0m
+hola
+true true true
+[0mPOST /api/auth/register [32m201[0m 760.760 ms - 55[0m
+[0mOPTIONS /api/auth/register [32m204[0m 0.207 ms - 0[0m
+hola
+contraseña igual
+[0mPOST /api/auth/register [33m400[0m 1.010 ms - 32[0m
+[0mOPTIONS /api/auth/register [32m204[0m 0.489 ms - 0[0m
+hola
+true false true
+hola
+true true true
+[0mPOST /api/auth/register [32m201[0m 380.164 ms - 55[0m
+[0mOPTIONS /api/auth/register [32m204[0m 0.129 ms - 0[0m
+hola
+contraseña igual
+[0mPOST /api/auth/register [33m400[0m 1.340 ms - 32[0m
+[0mOPTIONS /api/auth/register [32m204[0m 0.133 ms - 0[0m
+hola
+[0mPOST /api/auth/register [33m400[0m 152.668 ms - 67[0m
+usuario en la base de datos
+[0mPOST /api/auth/register [0m-[0m - ms - -[0m
+[0mOPTIONS /api/auth/register [32m204[0m 0.090 ms - 0[0m
+hola
+true true true
+[0mPOST /api/auth/register [32m201[0m 372.825 ms - 55[0m
+[0mOPTIONS /api/auth/register [32m204[0m 0.343 ms - 0[0m
+hola
+true true true
+[0mPOST /api/auth/register [32m201[0m 530.893 ms - 55[0m
+[0mOPTIONS /api/auth/login [32m204[0m 0.085 ms - 0[0m
+hola hemos llegado al backend
+{ userName: 'EduardoNuezWehbe', password: 'abcde' }
+null
+[0mPOST /api/auth/login [33m404[0m 130.447 ms - 47[0m
+hola hemos llegado al backend
+{ userName: 'EduardoNuezWehbe', password: 'abcd' }
+null
+[0mPOST /api/auth/login [33m404[0m 142.026 ms - 47[0m
+[0mOPTIONS /api/auth/login [32m204[0m 0.305 ms - 0[0m
+hola hemos llegado al backend
+{ userName: 'Eduardo', password: 'abcd' }
+null
+[0mPOST /api/auth/login [33m404[0m 292.150 ms - 47[0m
+hola hemos llegado al backend
+{ userName: 'Eduardo', password: '1234' }
+null
+[0mPOST /api/auth/login [33m404[0m 140.304 ms - 47[0m
+[0mOPTIONS /api/auth/login [32m204[0m 0.146 ms - 0[0m
+hola hemos llegado al backend
+{ userName: 'EduardoNuezWehbe', password: '1234' }
+null
+[0mPOST /api/auth/login [33m404[0m 136.059 ms - 47[0m
+[0mGET / [33m404[0m 3.823 ms - 139[0m
+[0mGET /api/auth [32m200[0m 152.020 ms - 1158[0m
+[0mGET /favicon.ico [33m404[0m 0.724 ms - 150[0m
+[0mOPTIONS /api/auth/register [32m204[0m 0.132 ms - 0[0m
+hola
+true true true
+[0mPOST /api/auth/register [32m201[0m 369.452 ms - 55[0m
+[0mOPTIONS /api/auth/login [32m204[0m 0.103 ms - 0[0m
+hola hemos llegado al backend
+{ userName: 'Eduardo', password: '1234' }
+{ _id: 600494f2ffe40aee99eca6b3,
+  userName: 'Eduardo',
+  fullName: 'nuez',
+  email: 'eduardo@gmail.com',
+  password:
+   '$2a$10$pCE7JroJ3Rk8bAGFyOc2a.ccrhKsrv/8K5BasseolQ96BSyaRlFsS',
+  __v: 0 }
+everything is working
+todo correcto
+{ _id: 600494f2ffe40aee99eca6b3,
+  userName: 'Eduardo',
+  email: 'eduardo@gmail.com' }
+Soy token pibe eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDA0OTRmMmZmZTQwYWVlOTllY2E2YjMiLCJ1c2VyTmFtZSI6IkVkdWFyZG8iLCJlbWFpbCI6ImVkdWFyZG9AZ21haWwuY29tIiwiaWF0IjoxNjEwOTEzMDE4LCJleHAiOjE2MTE1MTc4MTh9.be0lbM6gU3XWDE7h-AwBC_Ly1hGnhxuW4LsXHHRfaW8 y yo soy el auth { _id: 600494f2ffe40aee99eca6b3,
+  userName: 'Eduardo',
+  fullName: 'nuez',
+  email: 'eduardo@gmail.com',
+  password:
+   '$2a$10$pCE7JroJ3Rk8bAGFyOc2a.ccrhKsrv/8K5BasseolQ96BSyaRlFsS',
+  __v: 0 }
+[0mPOST /api/auth/login [32m200[0m 234.837 ms - 488[0m
+server on port 3000
+DB is connected
+server on port 3000
+DB is connected
+server on port 3000
+DB is connected
+server on port 3000
+DB is connected
+server on port 3000
+DB is connected
